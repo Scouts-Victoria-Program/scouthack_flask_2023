@@ -12,7 +12,7 @@
 
 <body>
     <section>
-        <!--x block header x-->
+        {% block header %}
         <div id="x1" class="container">
             <header>
                 <a href="{{ url_for('home') }}">
@@ -25,13 +25,13 @@
                 </ul>
             </header>
         </div>
-        <!--x endblock header x-->
+        {% endblock header %}
     </section>
 
     <section>
-        <!--x block content x-->
         <div id="x2" class="container">
-            <!--x block content_intro x-->
+            {% block content %}
+            {% block content_intro %}
             <div id="x3" class="row">
                 <div id="x4" class="col-3">
                     <!-- Put your Patrol logo here! -->
@@ -41,8 +41,8 @@
                     <!-- Heading and Paragraphs -->
                 </div>
             </div>
-            <!--x endblock content_intro x-->
-            <!--x block content_lists x-->
+            {% endblock content_intro %}
+            {% block content_lists %}
             <div id="x6" class="row py-5">
                 <div id="x7" class="col-4">
                     <h3 class="heading">Our Patrol Members</h3>
@@ -71,8 +71,8 @@
                     </p>
                 </div>
             </div>
-            <!--x endblock content_lists x-->
-            <!--x block content_events x-->
+            {% endblock content_lists %}
+            {% block content_events %}
             <div id="x10" class="row">
                 <div id="x11" class="col-9">
                     <h3>Upcoming events</h3>
@@ -108,13 +108,13 @@
                     <a href="" target="_blank" class="btn btn-primary">Suggest an Activity</a>
                 </div>
             </div>
-            <!--x endblock content_events x-->
+            {% endblock content_events %}
+            {% endblock content %}
         </div>
-        <!--x endblock content x-->
     </section>
 
     <section>
-        <!--x block footer x-->
+        {% block footer %}
         <div id="x13">
             <footer>
                 <p>&copy; 2023 Scouts Victoria, made at scouthack!</p>
@@ -127,7 +127,7 @@
                 </ul>
             </footer>
         </div>
-        <!--x endblock footer x-->
+        {% endblock footer %}
     </section>
 </body>
 
