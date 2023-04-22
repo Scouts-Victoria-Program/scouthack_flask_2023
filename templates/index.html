@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Some cool title!</title>
     <link rel="stylesheet" href="http://cdn.scouthack/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
@@ -15,12 +15,12 @@
         <!--x block header x-->
         <div id="x1" class="container">
             <header>
-                <a href="./index.html">
+                <a href="{{ url_for('home') }}">
                     <span>scouthack Patrol's Program Adventure</span>
                 </a>
 
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="./programs.html" class="nav-link">Programs</a></li>
                 </ul>
             </header>
@@ -35,7 +35,7 @@
             <div id="x3" class="row">
                 <div id="x4" class="col-3">
                     <!-- Put your Patrol logo here! -->
-                    <img src="./bandicoot.jpg" width="200px" height="200px">
+                    <img src="{{ url_for('static', filename='bandicoot.jpg') }}" width="200px" height="200px">
                 </div>
                 <div id="x5" class="col-9">
                     <!-- Heading and Paragraphs -->
@@ -119,10 +119,10 @@
             <footer>
                 <p>&copy; 2023 Scouts Victoria, made at scouthack!</p>
 
-                <a href="./index.html"></a>
+                <a href="{{ url_for('home') }}"></a>
 
                 <ul class="nav justify-content-end">
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="./programs.html" class="nav-link">Programs</a></li>
                 </ul>
             </footer>
