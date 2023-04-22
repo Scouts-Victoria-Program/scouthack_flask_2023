@@ -1,0 +1,4 @@
+.venv
+/programs.csv
+/programs.jsonl
+__pycache__/
