@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Some cool title!</title>
+    <title>{% block title %}Some cool title!{% endblock title %}</title>
     <link rel="stylesheet" href="http://cdn.scouthack/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -16,7 +16,7 @@
         <div id="x1" class="container">
             <header>
                 <a href="{{ url_for('home') }}">
-                    <span>scouthack Patrol's Program Adventure</span>
+                    <span>{% block header_title %}scouthack Patrol's Program Adventure{% endblock %}</span>
                 </a>
 
                 <ul class="nav nav-pills">
