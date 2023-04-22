@@ -1,0 +1,8 @@
+.heading { color: rgb(200, 100, 109); font-family:'Courier New'; }
+.heading2 { color: green; font-family:Impact; }
+.heading3 { color: #ffc90c; font-family:Georgia; }
+#x11 h3 { color: salmon; }
+.btn-primary { background-color: purple; }
+
+body { background-color: #ffc90c; }
+.container { background-color: white; }
