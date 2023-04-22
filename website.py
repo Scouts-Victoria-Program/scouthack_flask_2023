@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, request, redirect, url_for
+import csv
 
 app = Flask(__name__)
+fieldnames = ['author', 'idea']
+database = 'programs.csv'
 
 
 @app.route("/")
@@ -18,7 +21,18 @@ def hello(name=None):
 
 @app.route('/program/new', methods=['POST', 'GET'])
 def new_program():
-    return render_template('new_program.html')
+    if request.method == 'POST':
+        program = {
+            'author': request.form['author'],
+            'idea': request.form['idea']
+        }
+        with open(database, 'a') as csvfile:
+            csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            csvwriter.writerow(program)
+
+        return redirect(url_for('new_program'))
+    else:
+        return render_template('new_program.html')
 
 
 if __name__ == "__main__":
