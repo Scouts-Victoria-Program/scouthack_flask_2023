@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block header_title %}
+scouthack Patrol's Program Adventure
+{% endblock %}
+
+{% block content %}
+{% block content_intro %}
+<div id="x3" class="row">
+  <div id="x4" class="col-3">
+    <!-- Put your Patrol logo here! -->
+    <img src="{{ url_for('static', filename='bandicoot.jpg') }}" width="200px" height="200px">
+  </div>
+  <div id="x5" class="col-9">
+    <!-- Heading and Paragraphs -->
+  </div>
+</div>
+{% endblock content_intro %}
+{% block content_lists %}
+<div id="x6" class="row py-5">
+  <div id="x7" class="col-4">
+    <h3 class="heading">Our Patrol Members</h3>
+    <!-- Unordered list-->
+    <ul>
+      <li>Andy</li>
+      <li>Luke</li>
+      <li>mattcen</li>
+      <li>Gemma</li>
+    </ul>
+  </div>
+  <div id="x8" class="col-4">
+    <h3 class="heading2">Our Top Activities</h3>
+    <!-- Ordered list -->
+    <ol>
+      <li>Radio</li>
+      <li>Electronics</li>
+      <li>Coding - scouthack!</li>
+      <li>Science</li>
+    </ol>
+  </div>
+  <div id="x9" class="col-4">
+    <h3 class="heading3">Our Favourite Campsite</h3>
+    <!-- Paragraph -->
+    <p>Our Unit loves camping at Mafeking Rover Park near Yea, and at Cooinda Burrong in the Grampians!
+    </p>
+  </div>
+</div>
+{% endblock content_lists %}
+{% block content_events %}
+<div id="x10" class="row">
+  <div id="x11" class="col-9">
+    <h3>Upcoming events</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Event</th>
+          <th scope="col">Dates</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ScoutHike</td>
+          <td>19-21 May 2023</td>
+          <td>Tallarook State Forest</td>
+        </tr>
+        <tr>
+          <td>Melbourne Gangshow</td>
+          <td>16-24 June 2023</td>
+          <td>The Benson Centre, Melbourne</td>
+        </tr>
+        <tr>
+          <td>JOTA 2023</td>
+          <td>20-22 October 2023</td>
+          <td>On the Air!</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="x12" class="col-3">
+    <h3 class="">New ideas</h3>
+    <a href="" target="_blank" class="btn btn-primary">Suggest an Activity</a>
+  </div>
+</div>
+{% endblock content_events %}
+{% endblock content %}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Some cool title!{% endblock title %}</title>
+  <link rel="stylesheet" href="http://cdn.scouthack/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <section>
+    {% block header %}
+    <div id="x1" class="container">
+      <header>
+        <a href="{{ url_for('home') }}">
+          <span>{% block header_title %}scouthack Patrol's Program Adventure{% endblock %}</span>
+        </a>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./programs.html" class="nav-link">Programs</a></li>
+        </ul>
+      </header>
+    </div>
+    {% endblock header %}
+  </section>
+
+  <section>
+    <div id="x2" class="container">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </section>
+
+  <section>
+    {% block footer %}
+    <div id="x13">
+      <footer>
+        <p>&copy; 2023 Scouts Victoria, made at scouthack!</p>
+
+        <a href="{{ url_for('home') }}"></a>
+
+        <ul class="nav justify-content-end">
+          <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./programs.html" class="nav-link">Programs</a></li>
+        </ul>
+      </footer>
+    </div>
+    {% endblock footer %}
+  </section>
+</body>
+
+</html>
